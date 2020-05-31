@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sacolao/Second.dart';
 import 'package:sacolao/configs/SizeConfig.dart';
 
 
@@ -27,6 +28,14 @@ class _FrutasState extends State<Frutas> {
                         _buildFrutasCard("Kiwi", "assets/kiwi.png", "98", 0xffF7DFB9, 0XffFAF0DA),
                         SizedBox(height: 2 * SizeConfig.heightMultiplier,),
                         GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Second(),
+                              ),
+                            );
+                          },
                           child: _buildFrutasCard("Avocado", "assets/avocado.png", "128", 0xffC4D4A3, 0XffE0E8CF),
                         ),
                         SizedBox(height: 2 * SizeConfig.heightMultiplier,),
@@ -48,7 +57,7 @@ class _FrutasState extends State<Frutas> {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "A Spring suprise",
+                                    "A Spring Suprise",
                                     style: TextStyle(
                                         fontFamily: 'OpenSans-Bold',
                                         fontWeight: FontWeight.bold,
@@ -88,7 +97,7 @@ class _FrutasState extends State<Frutas> {
                                   ),
                                   SizedBox(height: 10.0),
                                   Text(
-                                    "Use the above for Spring collection",
+                                    "Use the code above for Spring collection purchases",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: 'OpenSans-Bold',
